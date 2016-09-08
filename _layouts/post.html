@@ -1,34 +1,36 @@
 ---
 layout: default
-css: ['sidebar-post-nav.css']
 ---
-{% include jumbotron.html %}
-<article class="post container" itemscope itemtype="http://schema.org/BlogPosting">
 
-    <div class="row">
+<div class="section">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <br>
+        <section class="v100">
+            <br>
+            <div class="post-header">
+                <h2 class="center-align teal-text post-title" itemprop="name headline">{{ page.title }}</h2>
+            </div>
 
-        {% if page.no-post-nav %}
-        <div class="col-md-12 markdown-body">
+            <div class="container markdown-file">
+                <div class="author">
+                    <p class="right post-meta "><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+                </div>
+                <br>
+            </div>
 
-            {{ content }}
+            <div class="divider"></div>
 
-            <!-- Comments -->
-            {% include disqus-comments.html %}
-        </div>
-        {% else %}
-        <div class="col-md-8 markdown-body">
+            <br>
 
-            {{ content }}
+            <div class="container">
+                <div class="container markdown-file post-content" itemprop="articleBody">
+                    <div class="post">
+                        {{ content }}
+                    </div>
+                </div>
+            </div>
 
-            <!-- Comments -->
-            {% include disqus-comments.html %}
-        </div>
+        </section>
+    </article>
+</div>
 
-        <div class="col-md-4">
-            {% include sidebar-post-nav.html %}
-        </div>
-        {% endif %}
-
-    </div>
-
-</article>
