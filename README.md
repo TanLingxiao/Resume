@@ -1,4 +1,4 @@
-# My Resume
+# My CV
 
 [TanLingxiao.github.io](https://tanlingxiao.github.io/)
 
