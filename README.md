@@ -1,4 +1,4 @@
-# My CV
+# My Curriculum Vitae
 
 [TanLingxiao.github.io](https://tanlingxiao.github.io/)
 
